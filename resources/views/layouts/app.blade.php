@@ -77,36 +77,36 @@
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
         <script src="{{ asset('js/theme.js') }}"></script>
-        {{-- TOAST R --}}
-        <script src="{{ asset('extra-libs/toastr/dist/build/toastr.min.js') }}"></script>
-        <script>
-            if (@json(session()->has('success'), JSON_PRETTY_PRINT)) {
-                // console.log(@json(session()->has('success'));
-                if (@json(session('success'), JSON_PRETTY_PRINT)) {
-                    toastr.success("{{ session('message') }}", 'Opération réussie', {
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut",
-                        timeOut: 5000
-                    })
-                }
-                if (!@json(session('success'), JSON_PRETTY_PRINT)) {
-                    toastr.error("{{ session('message') }}", 'Echec de l\'opération', {
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut",
-                        timeOut: 5000
-                    })
-                }
-            }
-
-            if (@json($errors->any(), JSON_PRETTY_PRINT)) {
-                toastr.error('{{ $errors->first() }}', 'Echec de l\'opération', {
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut",
-                    timeOut: 5000
-                })
-            }
-        </script>
-
+         {{-- TOAST R --}}
+     <script src="{{ asset('extra-libs/toastr/dist/build/toastr.min.js') }}"></script>
+     <script>
+         if (@json(session()->has('success'), JSON_PRETTY_PRINT)) {
+             // console.log(@json(session()->has('success'));
+             if (@json(session('success'), JSON_PRETTY_PRINT)) {
+                 toastr.success("{{ session('message') }}", 'Opération réussie', {
+                     "showMethod": "fadeIn",
+                     "hideMethod": "fadeOut",
+                     timeOut: 5000
+                 })
+             }
+             if (!@json(session('success'), JSON_PRETTY_PRINT)) {
+                 toastr.error("{{ session('message') }}", 'Echec de l\'opération', {
+                     "showMethod": "fadeIn",
+                     "hideMethod": "fadeOut",
+                     timeOut: 5000
+                 })
+             }
+         }
+ 
+         if (@json($errors->any(), JSON_PRETTY_PRINT)) {
+             toastr.error('{{ $errors->first() }}', 'Echec de l\'opération', {
+                 "showMethod": "fadeIn",
+                 "hideMethod": "fadeOut",
+                 timeOut: 5000
+             })
+         }
+     </script>
+ 
         @yield('script')
 </body>
 
