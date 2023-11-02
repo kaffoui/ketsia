@@ -20,8 +20,9 @@
     <!-- Stylesheet
 ============================================= -->
     <link rel="stylesheet" type="text/css" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" />
-    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href= "{{asset('vendor/font-awesome/css/all.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href=
+    "css/stylesheet.css" />
     <link href="{{ asset('extra-libs/toastr/dist/build/toastr.min.css') }}" rel="stylesheet">
 
 </head>
